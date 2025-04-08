@@ -1,0 +1,39 @@
+=IFERROR(QUERY(
+{
+IMPORTRANGE("spreadsheet_url", "sheet_name!A:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G")
+  },
+  "SELECT Col1, Col3, Col2, Col5, Col7 WHERE Col1 IS NOT NULL", 1),
+  "Error in Data Fetch"
+)
