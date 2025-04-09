@@ -1,5 +1,8 @@
 # HR_Automation_System
 
+> **Note:** Logic, code, and formulas for different parts of the system are organized in separate Git branches.  
+> Browse the branches to explore specific features, implementations, and decision flows.
+
 ### Purpose
 This project is all about making the internship recruitment process smoother and less time-consuming. Instead of manually tracking candidates and sending the same emails repeatedly, the goal is to create a system that automatically handles those routine tasks—so the HR team can spend more time having real conversations and less time on administrative work. The system is meant to improve efficiency, reduce manual effort, and support consistent communication while managing a large number of applicants.
 
