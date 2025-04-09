@@ -1,39 +1,45 @@
+# This formula consolidates the data from multiple ranges in different sheets into one sheet
+# Importrange to import rows, only accepting the first sheet header 
+# Query to select and reorder the columns; columns (1, 3, 2, 5, and 7).
+# Filtering out any rows where col1 is blank - It skips any rows where the first column is empty.
+# If there's an error during import or query, it displays "Error in Data Fetch."
+
 =IFERROR(QUERY(
 {
-IMPORTRANGE("spreadsheet_url", "sheet_name!A:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G");
-IMPORTRANGE("spreadsheet_url", "sheet_name!A2:G")
-  },
-  "SELECT Col1, Col3, Col2, Col5, Col7 WHERE Col1 IS NOT NULL", 1),
-  "Error in Data Fetch"
+IMPORTRANGE("spreadsheet_url_1", "sheet_name!A:G");
+IMPORTRANGE("spreadsheet_url_2", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_3", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_4", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_5", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_6", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_7", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_8", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_9", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_10", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_11", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_12", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_13", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_14", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_15", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_16", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_17", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_18", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_19", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_20", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_21", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_22", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_23", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_24", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_25", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_26", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_27", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_28", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_29", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_30", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_31", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_32", "sheet_name!A2:G");
+IMPORTRANGE("spreadsheet_url_33", "sheet_name!A2:G");
+},
+"SELECT Col1, Col3, Col2, Col5, Col7 WHERE Col1 IS NOT NULL", 1),
+"Error in Data Fetch"
 )
