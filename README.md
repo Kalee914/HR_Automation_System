@@ -1,4 +1,4 @@
-# HR_Automation_System - sheets formulas 
+# HR_Automation_System - Google Sheet Formulas 
 ## Purpose
 To consolidate applicant pre-interview data from multiple spreadsheet sources into a single, organized view that captures key fields:
 - Timestamp
