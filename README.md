@@ -25,7 +25,7 @@ This project is designed to automate the extraction of essential applicant infor
 ---
 
 ## Impact
-- ** Time-saving:** Reduces hours of manual data entry.
-- ** Consistency:** Ensures uniform formatting and accurate extraction across all applicants.
-- ** Accessibility:** Makes applicant data instantly available in a centralized Google Sheet.
-- ** Transparency:** Includes even files with no readable data for tracking and troubleshooting.
+- **Time-saving:** Reduces hours of manual data entry.
+- **Consistency:** Ensures uniform formatting and accurate extraction across all applicants.
+- **Accessibility:** Makes applicant data instantly available in a centralized Google Sheet.
+- **Transparency:** Includes even files with no readable data for tracking and troubleshooting.
