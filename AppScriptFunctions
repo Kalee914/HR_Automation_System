@@ -161,7 +161,7 @@ function sendPreInterviewEmails() {
                 var htmlBody = preInterviewTemplate.evaluate().getContent();
 
                 try {
-                  sendEmailUsingGmailAPI(email, "Pre-Interview Steps for " + position + " Internship at Cooledtured", htmlBody, aliasEmail);
+                  sendEmailUsingGmailAPI(email, "Pre-Interview Steps for " + position + " Internship at __________", htmlBody, aliasEmail);
 
                     mainSheet.getRange(i + 1, 6).setValue(new Date().toLocaleDateString() + " - Pre-interview sent");
                     emailCount++;
@@ -182,7 +182,7 @@ function sendPreInterviewEmails() {
                     var htmlBody = preInterviewFollowUpTemplate.evaluate().getContent();
 
                     try {
-                        sendEmailUsingGmailAPI(email, "Pre-Interview Steps for " + position + " Internship at Cooledtured", htmlBody, aliasEmail);
+                        sendEmailUsingGmailAPI(email, "Pre-Interview Steps for " + position + " Internship at ____________", htmlBody, aliasEmail);
 
                         mainSheet.getRange(i + 1, 7).setValue(new Date().toLocaleDateString() + " - Follow-up sent");
                         followUpCount++; // Increment follow-up count
@@ -229,7 +229,7 @@ function sendCalendlyEmails() {
                 var htmlBody = calendlyTemplate.evaluate().getContent();
 
                 try {
-                    sendEmailUsingGmailAPI(email, "Invitation to Connect - Cooledtured Internship Program!", htmlBody, aliasEmail);
+                    sendEmailUsingGmailAPI(email, "Invitation to Connect - ____________ Internship Program!", htmlBody, aliasEmail);
                     mainSheet.getRange(i + 1, 12).setValue(new Date().toLocaleDateString() + " - Calendly email sent");
                     calendlyEmailCount++;
                 } catch (error) {
@@ -247,7 +247,7 @@ function sendCalendlyEmails() {
                     var htmlBody = calendlyFollowUpTemplate.evaluate().getContent();
 
                     try {
-                        sendEmailUsingGmailAPI(email, "Reminder: Follow Up on Your Cooledtured Internship Interview", htmlBody, aliasEmail);
+                        sendEmailUsingGmailAPI(email, "Reminder: Follow Up on Your ____________ Internship Interview", htmlBody, aliasEmail);
                         mainSheet.getRange(i + 1, 13).setValue(new Date().toLocaleDateString() + " - Follow-up sent");
                         calendlyFollowUpCount++; // Increment follow-up count
                     } catch (error) {
@@ -294,7 +294,7 @@ function sendContractEmails() {
                 var htmlBody = contractTemplate.evaluate().getContent();
 
                 try {
-                    sendEmailUsingGmailAPI(email, "[Action Required] Internship Contract for Cooledtured", htmlBody, aliasEmail);
+                    sendEmailUsingGmailAPI(email, "[Action Required] Internship Contract for ____________", htmlBody, aliasEmail);
 
                     mainSheet.getRange(i + 1, 17).setValue(new Date().toLocaleDateString() + " - Contract email sent");
                     contractEmailCount++;
@@ -313,7 +313,7 @@ function sendContractEmails() {
                     var htmlBody = contractFollowUpTemplate.evaluate().getContent();
 
                     try {
-                        sendEmailUsingGmailAPI(email, "Reminder: Follow Up on Your Internship Contract [cooledtured]", htmlBody, aliasEmail);
+                        sendEmailUsingGmailAPI(email, "Reminder: Follow Up on Your Internship Contract [____________]", htmlBody, aliasEmail);
 
                         mainSheet.getRange(i + 1, 18).setValue(new Date().toLocaleDateString() + " - Follow-up sent");
                         contractFollowUpCount++; // Increment follow-up count
