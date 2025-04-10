@@ -9,7 +9,7 @@ The goals of this project are to:
    - **Terminated**: Candidates who didn't pass the pre-interview or interview or who self-terminate.
    - **International Interns**: Candidates on OPT or CPT.
    - **Onboarded**: Candidates who have completed the recruitment process and are onboarded.
-   Only active candidates in the process remain in the system. Additionally, certain columns in the sheet are locked to prevent unauthorized changes and protect sensitive data.
+> Only active candidates in the process remain in the system. Additionally, certain columns in the sheet are locked to prevent unauthorized changes and protect sensitive data.
 2. **Email Automation**: Automatically send pre-interview, Calendly, and contract emails based on the candidate’s recruitment stage, using logic and conditions that trigger the emails at the right time. This includes follow-up emails after a set time, ensuring no candidate is overlooked.
 3. **Email Sending Limits**: To prevent exceeding the maximum email limits per day, a counter is used to track the number of emails sent, ensuring that the set daily limit is respected.
 4. **Scalability & Efficiency**: Keep the recruitment system organized and scalable by removing inactive candidates from the system and reducing manual intervention.
