@@ -214,13 +214,13 @@ function sendCalendlyEmails() {
         
         var name = data[i][0]; // Column A (Full Name)
         var email = data[i][2].trim(); // Column C (Recipient email)
-		    var preInterviewStatus = data[i][10]; // Column K (Yu Yang: Pass OR Fail Sent)
-		    var calendlySentStatus = data[i][11]; // Column L (Calendly Email Sent)
-		    var	calendlyFollowUpStatus = data[i][12]; // Column M (Calendly Follow-Up Email)
+	var preInterviewStatus = data[i][10]; // Column K (Yu Yang: Pass OR Fail Sent)
+	var calendlySentStatus = data[i][11]; // Column L (Calendly Email Sent)
+	var	calendlyFollowUpStatus = data[i][12]; // Column M (Calendly Follow-Up Email)
         var calendlyReserved = data[i][14]; // Column O (Calendly Appointment Reserved)
 
 
-        if (String(preInterviewStatus).trim() === "Pass") {
+        if (/^[\w.-]+@[\w.-]+\.\w+$/.test(email) && String(preInterviewStatus).trim() === "Pass") {
             if (!calendlySentStatus && calendlyReserved === "N/A" && calendlyEmailCount < maxCalendlyEmails) {
 			
                 // Send calendly Email
@@ -279,13 +279,13 @@ function sendContractEmails() {
         
         var name = data[i][0]; // (Full Name)
         var email = data[i][2].trim(); //  (Recipient email)
-		    var interviewStatus = data[i][15]; // (Jason: Pass OR Fail)
-		    var contractSentStatus = data[i][16]; //(contract Email Sent)
-		    var	contractFollowUPStatus = data[i][17]; //(contract Follow-Up Email)
+	var interviewStatus = data[i][15]; // (Jason: Pass OR Fail)
+	var contractSentStatus = data[i][16]; //(contract Email Sent)
+	var	contractFollowUPStatus = data[i][17]; //(contract Follow-Up Email)
         var contractReceived = data[i][19]; //(contract Appointment Reserved)
 
 
-        if (String(interviewStatus).trim() === "Pass") {
+        if (/^[\w.-]+@[\w.-]+\.\w+$/.test(email) && String(interviewStatus).trim() === "Pass") {
             if (!contractSentStatus && contractReceived === "N/A" && contractEmailCount < maxContractEmails) {
 			
                 // Send contract Email
