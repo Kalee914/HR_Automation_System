@@ -16,12 +16,10 @@ function lockColumns() {
   columnsToRelock.forEach(function(col) {
     var range = sheet.getRange(col + '1:' + col);  // Get the entire column from row 1 onward
     var protection = range.protect(); // Reapply protection
-    protection.addEditor(Session.getEffectiveUser()); 
     protection.removeEditors(protection.getEditors()); 
   });
   var rowsToLock = sheet.getRange('1:2'); // Lock rows 1 and 2
   var rowProtection = rowsToLock.protect();
-  rowProtection.addEditor(Session.getEffectiveUser()); 
   rowProtection.removeEditors(rowProtection.getEditors());
 }
 
