@@ -214,7 +214,7 @@ function sendCalendlyEmails() {
         
         var name = data[i][0]; // Column A (Full Name)
         var email = data[i][2].trim(); // Column C (Recipient email)
-	var preInterviewStatus = data[i][10]; // Column K (Yu Yang: Pass OR Fail Sent)
+	var preInterviewStatus = data[i][10]; // Column K (Pre_Interview: Pass OR Fail Sent)
 	var calendlySentStatus = data[i][11]; // Column L (Calendly Email Sent)
 	var	calendlyFollowUpStatus = data[i][12]; // Column M (Calendly Follow-Up Email)
         var calendlyReserved = data[i][14]; // Column O (Calendly Appointment Reserved)
@@ -279,7 +279,7 @@ function sendContractEmails() {
         
         var name = data[i][0]; // (Full Name)
         var email = data[i][2].trim(); //  (Recipient email)
-	var interviewStatus = data[i][15]; // (Jason: Pass OR Fail)
+	var interviewStatus = data[i][15]; // (Interview: Pass OR Fail Sent)
 	var contractSentStatus = data[i][16]; //(contract Email Sent)
 	var	contractFollowUPStatus = data[i][17]; //(contract Follow-Up Email)
         var contractReceived = data[i][19]; //(contract Appointment Reserved)
