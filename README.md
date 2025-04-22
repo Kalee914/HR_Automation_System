@@ -11,6 +11,7 @@ This project is all about making the internship recruitment process smoother and
 - Move candidates to corresponding sheets once they’ve reached certain stages—so only active applicants remain in the system. This keeps things clean, scalable, and easy to manage.  
 - Keep all information in one central place—eliminating the need to jump between tabs or lose track of past interactions.  
 - Use smart logic to only contact the right candidates at the right time.
+- Enforce access control security by developing the automation from a main owner account and selectively sharing access with HR using Google’s built-in sharing permissions (Viewer, Commenter, Editor roles). HR team members are granted limited access through protected sheet ranges and role-based sharing, ensuring only authorized users can perform sensitive operations. This helps maintain data integrity, prevent unauthorized changes, and secure confidential information.
   
 > **Note:** Logic, code, and formulas for different parts of the system are organized in separate Git branches.  
 > Browse the branches to explore specific features, implementations, and decision flows.
