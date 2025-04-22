@@ -5,14 +5,14 @@ The purpose of this project is to automate and optimize the internship recruitme
 
 ## Goal
 The goals of this project are to:
-1. **Data Organization & Security**: Automatically move candidates to the appropriate sheets based on their recruitment status:
+1. **Data Organization & Scalability**: Automatically move candidates to the appropriate sheets based on their recruitment status:
    - **Terminated**: Candidates who didn't pass the pre-interview or interview or who self-terminate.
-   - **International Interns**: Candidates on OPT or CPT.
+   - **International Interns**: Candidates on Optional Practical Training (OPT) or Curricular Practical Training (CPT).
    - **Onboarded**: Candidates who have completed the recruitment process and are onboarded.
-> Only active candidates in the process remain in the system. Additionally, certain columns in the sheet are locked to prevent unauthorized changes and protect sensitive data.
-2. **Email Automation**: Automatically send pre-interview, Calendly, and contract emails based on the candidate’s recruitment stage, using logic and conditions that trigger the emails at the right time. This includes follow-up emails after a set time, ensuring no candidate is overlooked.
-3. **Email Sending Limits**: To prevent exceeding the maximum email limits per day, a counter is used to track the number of emails sent, ensuring that the set daily limit is respected.
-4. **Scalability & Efficiency**: Keep the recruitment system organized and scalable by removing inactive candidates from the system and reducing manual intervention.
+> Keep the recruitment system organized and scalable by removing inactive candidates from the system and reducing manual intervention.
+2. **Email Automation**: Automatically send pre-interview, Calendly, and contract emails based on the candidate’s recruitment stage, using logic and conditions that trigger the emails at the right time. This includes sending follow-up emails at a set time to ensure that no candidate is overlooked.
+3. **Email Sending Limits**: To prevent exceeding the daily email limit, a counter tracks the number of emails sent, ensuring the set daily limit is respected.
+4. **Security**: certain columns in the sheet are locked to prevent unauthorized changes and protect sensitive data.
 
 ## Impact
 By automating the management of intern data and email communication, this system:
