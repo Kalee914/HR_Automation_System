@@ -13,7 +13,7 @@ This project is designed to extract the essential applicant information—such a
 ---
 
 ## How It Works
-1.  This program, written in Python, scans specified folders and all their subfolders for PDF and DOCX files.
+1.  This program, written in Python, scans specified folder and all their subfolders for PDF and DOCX files.
 2. It extracts text content from each file and uses **Natural Language Processing (NLP)** and **regular expressions** to:
    - Identify candidate names using **spaCy’s Named Entity Recognition (NER)**.
    - Extract **email addresses** and **phone numbers**.
