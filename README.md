@@ -1,7 +1,7 @@
 # Google Drive Folder Extractor
 
 ## Project Overview
-This project is designed to automate the extraction of essential applicant information—such as names, phone numbers, and emails—from resumes submitted in **PDF** and **DOCX** formats. These resumes are stored in a centralized folder, typically containing multiple subfolders categorized by group and position.
+This project is designed to extract the essential applicant information—such as names, phone numbers, and emails—from resumes submitted in **PDF** and **DOCX** formats. These resumes are stored in a centralized folder, typically containing multiple subfolders categorized by group and position.
 
 ---
 
