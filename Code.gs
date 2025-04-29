@@ -323,3 +323,23 @@ function sendContractEmails() {
         }
     }
 }
+
+function exportSheetToCSV() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("sheet_name");
+  const sheetName = sheet.getName(); 
+  
+  const today = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd");
+  const filename = sheetName + "_" + today + ".csv";
+
+  const data = sheet.getDataRange().getValues();
+  
+  let csv = "";
+  data.forEach(function(row) {
+    csv += row.map(cell => `"${cell}"`).join(",") + "\n"; // Handles commas inside cells
+  });
+
+  const blob = Utilities.newBlob(csv, "text/csv", filename);
+
+  const folder = DriveApp.getFolderById("Google_Drive_Folder_ID");
+  folder.createFile(blob);
+}
