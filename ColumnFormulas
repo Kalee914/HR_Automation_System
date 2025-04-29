@@ -1,66 +1,85 @@
 "An array formula that checks if column C is empty. 
-If not, it looks for the cleaned-up value in column C in another sheet (column D). 
-If a match is found, it returns the value from column A of that sheet. 
-If no match is found or there is an error, it shows 'N/A'."
+If not, it looks for the cleaned-up value in column C of the import source. 
+If a match is found, it returns the value from the import source column D of that sheet. 
+If no match is found or there is an error, it shows 'N/A.'"
 
+# Keeping array formula between 2-1000 to optimize performance 
 
-=ARRAYFORMULA(IF(C2:C = "", "", IFERROR(VLOOKUP(LOWER(TRIM(CLEAN(C2:C))), 
-ARRAYFORMULA({LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "mergesheets_name!D:D")))), 
-IMPORTRANGE("spreadsheet_url", "mergesheets_name!A:A")}), 2, FALSE), "N/A")))
+# Column I Pre_Interview Response Received
 
-"Same concept but if a match is found, it returns the value from column E of that sheet." 
+=ARRAYFORMULA(
+  IF(C2:C1000 = "", "", 
+    IFERROR(
+      VLOOKUP(
+        LOWER(TRIM(CLEAN(C2:C1000))),
+        {LOWER(TRIM(CLEAN('Import source'!C3:C300))), 'Import source'!D3:D300},
+        2,
+        FALSE
+      ),
+      "N/A"
+    )
+  )
+)
 
-=ARRAYFORMULA(IF(C2:C = "", "", IFERROR(VLOOKUP(LOWER(TRIM(CLEAN(C2:C))), 
-ARRAYFORMULA({LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "mergesheets_name!D:D")))), 
-IMPORTRANGE("spreadsheet_url", "mergesheets_name!E:E")}), 2, FALSE), "N/A")))
+"Same concept, but if a match is found, it returns the value from column E of that sheet." 
+
+=ARRAYFORMULA(
+  IF(C2:C1000 = "", "", 
+    IFERROR(
+      VLOOKUP(
+        LOWER(TRIM(CLEAN(C2:C1000))),
+        {LOWER(TRIM(CLEAN('Import source'!C3:C300))), 'Import source'!E3:E300},
+        2,
+        FALSE
+      ),
+      "N/A"
+    )
+  )
+)
 
 
 
 "An array formula that checks if columns C and B are empty. 
-If not, it looks for cleaned-up values in column C first and then in column B in another sheet (Calendly Sheet). 
-If a match is found, it returns the corresponding value from column C of that sheet. 
+If not, it looks for cleaned-up values in column C first and then in column B in the import source (Calendly columns F). 
+If a match is found, it returns the corresponding value from column G of the import source sheet. 
 If the value is empty or no match is found, 'N/A' is returned."
 
-=ARRAYFORMULA(IF((C2:C = "") * (B2:B = ""), "",  
+=ARRAYFORMULA(IF((C2:C1000 = "") * (B2:B1000 = ""), "",  
   IFERROR(
-    IF(VLOOKUP(LOWER(TRIM(CLEAN(C2:C))),  
-      {LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "Calendly Sheet!B:B")))),  
-      IMPORTRANGE("spreadsheet_url", "Calendly Sheet!C:C")}, 2, FALSE) = "", "N/A",
-      VLOOKUP(LOWER(TRIM(C2:C)),  
-      {LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "Calendly Sheet!B:B")))),  
-      IMPORTRANGE("spreadsheet_url", "Calendly Sheet!C:C")}, 2, FALSE)
-    ),  
+    VLOOKUP(
+      LOWER(TRIM(CLEAN(C2:C1000))), 
+      {LOWER(TRIM(CLEAN('Import source'!F3:F300))), 'Import source'!G3:G300}, 
+      2, 
+      FALSE
+    ),
     IFERROR(
-      IF(VLOOKUP(LOWER(TRIM(CLEAN(B2:B))),  
-        {LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "Calendly Sheet!B:B")))),  
-        IMPORTRANGE("spreadsheet_url", "Calendly Sheet!C:C")}, 2, FALSE) = "", "N/A",
-        VLOOKUP(LOWER(TRIM(CLEAN(B2:B))),  
-        {LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "Calendly Sheet!B:B")))),  
-        IMPORTRANGE("spreadsheet_url", "Calendly Sheet!C:C")}, 2, FALSE)
-      ),  
+      VLOOKUP(
+        LOWER(TRIM(CLEAN(B2:B1000))), 
+        {LOWER(TRIM(CLEAN('Import source'!D3:F300))), 'Import source'!G3:G300}, 
+        2, 
+        FALSE
+      ),
     "N/A")
   )
 ))
 
-"Same concept but if a match is found, it returns the corresponding value from column A of that sheet. "
-=ARRAYFORMULA(IF((C2:C = "") * (B2:B = ""), "",  
-  IFERROR(
-    IF(VLOOKUP(LOWER(TRIM(CLEAN(C2:C))),  
-      {LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "sheet_name!B:B")))),  
-      IMPORTRANGE("spreadsheet_url", "sheet_name!A:A")}, 2, FALSE) = "", "N/A",
+"Same concept, but if a match is found, it returns the corresponding value from import source column I. "
 
-      VLOOKUP(LOWER(TRIM(CLEAN(C2:C))),  
-      {LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "sheet_name!B:B")))),  
-      IMPORTRANGE("spreadsheet_url", "sheet_name!A:A")}, 2, FALSE)
-    ),  
+=ARRAYFORMULA(IF((C2:C1000 = "") * (B2:B1000 = ""), "",  
+  IFERROR(
+    VLOOKUP(
+      LOWER(TRIM(CLEAN(C2:C1000))), 
+      {LOWER(TRIM(CLEAN('Import source'!H3:H300))), 'Import source'!I3:I300}, 
+      2, 
+      FALSE
+    ),
     IFERROR(
-      IF(VLOOKUP(LOWER(TRIM(CLEAN(B2:B))),  
-        {LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "sheet_name!B:B")))),  
-        IMPORTRANGE("spreadsheet_url", "sheet_name!A:A")}, 2, FALSE) = "", "N/A",
-        VLOOKUP(LOWER(TRIM(CLEAN(B2:B))),  
-        {LOWER(TRIM(CLEAN(IMPORTRANGE("spreadsheet_url", "sheet_name!B:B")))),  
-        IMPORTRANGE("spreadsheet_url", "sheet_name!A:A")}, 2, FALSE)
-      ),  
+      VLOOKUP(
+        LOWER(TRIM(CLEAN(B2:B1000))), 
+        {LOWER(TRIM(CLEAN('Import source'!H3:H300))), 'Import source'!I3:I300}, 
+        2, 
+        FALSE
+      ),
     "N/A")
   )
 ))
