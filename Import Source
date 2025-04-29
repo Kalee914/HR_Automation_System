@@ -1,1 +1,7 @@
+# "Source IMPORTRANGE Lookup" - Data is imported once into a local sheet and then referenced for fast lookup.
 
+=QUERY(IMPORTRANGE("URL", "PreInterview_Response_Merged!A:E"), "SELECT Col2, Col3, Col4, Col1, Col5 ORDER BY Col1 DESC LIMIT 200", 1)
+
+=QUERY(IMPORTRANGE("URL", "Calendly Sorting View!B:C"), "SELECT * LIMIT 250", 1)
+
+=QUERY(IMPORTRANGE("URL", "Form Responses 1!A:F"), "SELECT Col2, Col1, Col6 ORDER BY Col1 DESC LIMIT 250", 1)
