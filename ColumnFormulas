@@ -21,6 +21,7 @@ If no match is found or there is an error, it shows 'N/A.'"
   )
 )
 
+# Column J School Requirement
 "Same concept, but if a match is found, it returns the value from column E of that sheet." 
 
 =ARRAYFORMULA(
@@ -38,7 +39,7 @@ If no match is found or there is an error, it shows 'N/A.'"
 )
 
 
-
+# Calendly Appointment Reserved Column O
 "An array formula that checks if columns C and B are empty. 
 If not, it looks for cleaned-up values in column C first and then in column B in the import source (Calendly columns F). 
 If a match is found, it returns the corresponding value from column G of the import source sheet. 
@@ -63,6 +64,8 @@ If the value is empty or no match is found, 'N/A' is returned."
   )
 ))
 
+
+#Contract Response Received Column T
 "Same concept, but if a match is found, it returns the corresponding value from import source column I. "
 
 =ARRAYFORMULA(IF((C2:C1000 = "") * (B2:B1000 = ""), "",  
