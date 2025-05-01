@@ -1,5 +1,9 @@
 # HR_Automation_System - Google Sheet Formulas 
-## Purpose
+
+# Import Source
+
+# Pre-interview Questionnaire 
+
 To consolidate applicant pre-interview data from multiple spreadsheet sources into a single, organized view that captures key fields:
 - Timestamp
 - Full Legal Name
@@ -7,20 +11,24 @@ To consolidate applicant pre-interview data from multiple spreadsheet sources in
 - Recipient Email
 - School Requirement
 
-Then, enrich that data by cross-referencing it with real-time updates from:
-- Calendly for scheduled appointments
-- Contract Sheet for agreement confirmations
+# Spreadsheet from the calendly extracted data
+- Email
+- Event Date/Time
+  
+# Contract Response data
+- Email
+- Timestamp
 
 ---
 
 ## Goal
 - Create a unified and reliable applicant tracking system using Google Sheets.
 - Automatically import and clean data from up to 33 sheets using `IMPORTRANGE` and `QUERY`.
-- Filter only the relevant columns and exclude incomplete rows.
+- Filter only the relevant columns.
 - Use `VLOOKUP` to check if each applicant has:
   - Responsed Pre-interview Questions
   - Reserved an interview via Calendly
-  - Signed a contract
+  - Responsed contract
 - Display real-time status for each applicant.
 
 ---
