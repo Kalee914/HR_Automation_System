@@ -2,7 +2,7 @@
 
 ## Import Source
 
-### Pre-interview Questionnaire 
+#### Pre-interview Questionnaire 
 
 To consolidate applicant pre-interview data from multiple spreadsheet sources into a single, organized view that captures key fields:
 - Timestamp
@@ -11,11 +11,11 @@ To consolidate applicant pre-interview data from multiple spreadsheet sources in
 - Recipient Email
 - School Requirement
 
-### Calendly Extracted Data
+#### Calendly Extracted Data
 - Email
 - Event Date/Time
   
-### Contract Response Data
+#### Contract Response Data
 - Email
 - Timestamp
 
