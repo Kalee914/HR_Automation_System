@@ -11,11 +11,11 @@ To consolidate applicant pre-interview data from multiple spreadsheet sources in
 - Recipient Email
 - School Requirement
 
-# Spreadsheet from the calendly extracted data
+# Calendly Extracted Data
 - Email
 - Event Date/Time
   
-# Contract Response data
+# Contract Response Data
 - Email
 - Timestamp
 
