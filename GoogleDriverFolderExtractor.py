@@ -3,6 +3,7 @@
 !pip install PyPDF2
 !pip install spacy
 !python -m spacy download en_core_web_sm
+!pip install pdfplumber
 
 from google.colab import drive
 drive.mount('/content/drive')
@@ -36,10 +37,13 @@ worksheet = spreadsheet.add_worksheet(title=sheet_name, rows="1000", cols="50")
 
 import os
 import re
-import PyPDF2
+#import PyPDF2
 import docx
 import pandas as pd
 import spacy
+import logging
+logging.getLogger("pdfminer").setLevel(logging.ERROR) #suppress warning 
+import pdfplumber #using pdfplumber instead of PyPDF2
 
 # Load spaCy's English NLP model
 nlp = spacy.load("en_core_web_sm")
@@ -57,6 +61,7 @@ def extract_names(text):
     return names
 
 # Function to extract text from PDF
+'''
 def extract_text_from_pdf(file_path):
     try:
         with open(file_path, 'rb') as f:
@@ -66,7 +71,20 @@ def extract_text_from_pdf(file_path):
     except Exception as e:
         print(f"Error reading PDF {file_path}: {e}")
         return "N/A"
+'''
 
+# Function to extract text from PDF (with pyfplumber)
+def extract_text_from_pdf(file_path):
+    try:
+        with pdfplumber.open(file_path) as pdf:
+            text = "\n".join(
+                page.extract_text() for page in pdf.pages if page.extract_text()
+            )
+        return text if text else "N/A"
+    except Exception as e:
+        print(f"Error reading PDF {file_path}: {e}")
+        return "N/A"
+        
 # Function to extract text from DOCX
 def extract_text_from_docx(file_path):
     try:
@@ -137,7 +155,7 @@ def clean_data(df):
     df["Name"] = df["Name"].apply(lambda x: " ".join(word.capitalize() for word in x.split()) if x != "N/A" else "N/A")
 
     # Trim whitespace
-    df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+    df = df.apply(lambda col: col.map(lambda x: x.strip() if isinstance(x, str) else x))
 
     return df
 
