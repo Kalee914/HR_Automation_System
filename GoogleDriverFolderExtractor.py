@@ -73,7 +73,7 @@ def extract_text_from_pdf(file_path):
         return "N/A"
 '''
 
-# Function to extract text from PDF (with pyfplumber)
+# Function to extract text from PDF (with pdfplumber)
 def extract_text_from_pdf(file_path):
     try:
         with pdfplumber.open(file_path) as pdf:
