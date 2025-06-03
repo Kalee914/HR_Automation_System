@@ -21,3 +21,5 @@ By automating the management of intern data and email communication, this system
 - **Optimizes Email Communication**: Sends timely emails based on the candidate's stage in the recruitment process, enhancing candidate experience and reducing manual oversight.
 - **Prevents Over-Sending**: The email counter ensures that no more than the maximum allowed number of emails is sent per day, preventing email overload.
 - **Boosts Operational Efficiency**: Minimizes time spent manually sorting and updating data by automating repetitive tasks, allowing the recruitment team to concentrate on high-priority, people-centric activities such as follow-up calls, interviews, and candidate selection.
+
+To set up oAuth2 I refereneced - https://github.com/googleworkspace/apps-script-oauth2
