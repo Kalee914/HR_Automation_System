@@ -7,11 +7,11 @@ If no match is found or there is an error, it shows 'N/A.'"
 
 # Column I Pre_Interview Response Received
 
-=ARRAYFORMULA(
-  IF(C2:C1000 = "", "", 
+={"Header_Name"; ARRAYFORMULA(
+  IF(C2:C840 = "", "", 
     IFERROR(
       VLOOKUP(
-        LOWER(TRIM(CLEAN(C2:C1000))),
+        LOWER(TRIM(CLEAN(C2:C840))),
         {LOWER(TRIM(CLEAN('Import source'!C3:C300))), 'Import source'!D3:D300},
         2,
         FALSE
@@ -19,16 +19,16 @@ If no match is found or there is an error, it shows 'N/A.'"
       "N/A"
     )
   )
-)
+)}
 
 # Column J School Requirement
 "Same concept, but if a match is found, it returns the value from column E of that sheet." 
 
-=ARRAYFORMULA(
-  IF(C2:C1000 = "", "", 
+={"Header_Name"; ARRAYFORMULA(
+  IF(C2:C840 = "", "", 
     IFERROR(
       VLOOKUP(
-        LOWER(TRIM(CLEAN(C2:C1000))),
+        LOWER(TRIM(CLEAN(C2:C840))),
         {LOWER(TRIM(CLEAN('Import source'!C3:C300))), 'Import source'!E3:E300},
         2,
         FALSE
@@ -36,7 +36,7 @@ If no match is found or there is an error, it shows 'N/A.'"
       "N/A"
     )
   )
-)
+)}
 
 
 # Calendly Appointment Reserved Column O
@@ -45,44 +45,44 @@ If not, it looks for cleaned-up values in column C first and then in column B in
 If a match is found, it returns the corresponding value from column G of the import source sheet. 
 If the value is empty or no match is found, 'N/A' is returned."
 
-=ARRAYFORMULA(IF((C2:C1000 = "") * (B2:B1000 = ""), "",  
+={"Header_Name";ARRAYFORMULA(IF((C2:C840 = "") * (B2:B840 = ""), "",  
   IFERROR(
     VLOOKUP(
-      LOWER(TRIM(CLEAN(C2:C1000))), 
+      LOWER(TRIM(CLEAN(C2:C840))), 
       {LOWER(TRIM(CLEAN('Import source'!F3:F300))), 'Import source'!G3:G300}, 
       2, 
       FALSE
     ),
     IFERROR(
       VLOOKUP(
-        LOWER(TRIM(CLEAN(B2:B1000))), 
-        {LOWER(TRIM(CLEAN('Import source'!D3:F300))), 'Import source'!G3:G300}, 
+        LOWER(TRIM(CLEAN(B2:B840))), 
+        {LOWER(TRIM(CLEAN('Import source'!F3:F300))), 'Import source'!G3:G300}, 
         2, 
         FALSE
       ),
     "N/A")
   )
-))
+))}
 
 
 #Contract Response Received Column T
 "Same concept, but if a match is found, it returns the corresponding value from import source column I. "
 
-=ARRAYFORMULA(IF((C2:C1000 = "") * (B2:B1000 = ""), "",  
+={"Header_Name"; ARRAYFORMULA(IF((C2:C840 = "") * (B2:B840 = ""), "",  
   IFERROR(
     VLOOKUP(
-      LOWER(TRIM(CLEAN(C2:C1000))), 
+      LOWER(TRIM(CLEAN(C2:C840))), 
       {LOWER(TRIM(CLEAN('Import source'!H3:H300))), 'Import source'!I3:I300}, 
       2, 
       FALSE
     ),
     IFERROR(
       VLOOKUP(
-        LOWER(TRIM(CLEAN(B2:B1000))), 
+        LOWER(TRIM(CLEAN(B2:B840))), 
         {LOWER(TRIM(CLEAN('Import source'!H3:H300))), 'Import source'!I3:I300}, 
         2, 
         FALSE
       ),
     "N/A")
   )
-))
+))}
