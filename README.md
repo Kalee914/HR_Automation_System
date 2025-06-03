@@ -2,13 +2,13 @@
 
 
 ### Purpose
-This project aims to streamline the internship recruitment process, making it smoother and less time-consuming. Instead of manually tracking candidates and sending the same emails repeatedly, the goal is to create a system that automatically handles these routine tasks—so the HR team can spend more time engaging in meaningful conversations and less time on administrative work. The system is designed to enhance efficiency, minimize manual effort, and facilitate consistent communication while managing a large volume of applicants.
+This project aims to streamline the internship recruitment process, making it smoother and less time-consuming. Instead of manually tracking candidates and sending the same emails repeatedly, the goal is to create a system that automatically handles these routine tasks, allowing the HR team to spend more time engaging in meaningful conversations and less time on administrative work. The system is designed to enhance efficiency, minimize manual effort, and facilitate consistent communication while managing a large volume of applicants.
 
 ### Goals
 - Personalize and send onboarding or pre-interview emails based on predefined templates.  
 - Track recruitment stages and update statuses in real-time within the same Google Sheet.  
 - Use the Gmail API (instead of `GmailApp.sendEmail` and `MailApp.sendEmail`) to get around email-sending limits and support larger-scale outreach.  
-- Move candidates to corresponding sheets once they’ve reached certain stages—so only active applicants remain in the system. This keeps things clean, scalable, and easy to manage.  
+- Move candidates to corresponding sheets once they’ve reached certain stages so only active applicants remain in the system. This keeps things clean, scalable, and easy to manage.  
 - Keep all information in one central place—eliminating the need to jump between tabs or lose track of past interactions.  
 - Use smart logic to contact only the right candidates at the right time.
 - Enforce access control security by developing the automation from a main owner account and selectively sharing access with HR using Google’s built-in sharing permissions (Viewer, Commenter, Editor roles). HR team members are granted limited access through protected sheet ranges and role-based sharing, ensuring only authorized users can perform sensitive operations. This helps maintain data integrity, prevent unauthorized changes, and secure confidential information.
@@ -17,4 +17,4 @@ This project aims to streamline the internship recruitment process, making it sm
 > Browse the branches to explore specific features, implementations, and decision flows.
 
 ### Impact
-This automation will significantly reduce the workload of HR team members by eliminating repetitive tasks such as email drafting, sending, and manual status updates. It will help ensure timely communication with candidates, leading to a smoother and more professional recruitment experience. 
+This automation will significantly reduce the workload of HR team members by eliminating repetitive tasks, such as drafting, sending, and manually updating status. It will help ensure timely communication with candidates, leading to a smoother and more professional recruitment experience. 
